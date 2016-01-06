@@ -1,0 +1,15 @@
+.menu{
+    width: 35%;
+    max-width: 220px;
+    font-size: 1.2em;
+}
+.menu li{
+    padding: 6px;
+    margin-bottom: 5px;
+    background-color : cornflowerblue;
+    border-radius: 15px;
+}
+
+.content {
+    width: 65%;
+}

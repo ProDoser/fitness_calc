@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fitness calculator</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" media="(max-width: 800px)" href="800px.css">
+    <link rel="stylesheet" media="(orientation: portrait)" href="portrait.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <p id="p_title">Home</p>
+    </div>
+    <div class="menu">
+        <ul>
+            <li onclick="home()">Home</li>
+            <li onclick="calc_bmi()">BMI Index</li>
+            <li onclick="calc_hrz()">Hearth Rate Zones</li>
+        </ul>
+    </div>
+    <div class="content">
+        <div id="main">
+            <h1>Welcome to Fitness Calculator</h1>
+            <p>You can navigate to the </p>
+        </div>
+        <div id="bmi_page">
+            <h1>Please enter your body parameters below</h1>
+            <p>Height cm:</p>
+            <input type="number" id="bmi_height" />
+            <p>Weight kg:</p>
+            <input type="number" id="bmi_weight" />
+            <button id="bmi_btn" onclick="bmi('bmi_height', 'bmi_weight' )">Calculate</button>
+
+            <div id="bmi_output">
+                <p id="bmi_index"></p>
+                <p id="bmi_result"></p>
+            </div>
+
+
+        </div>
+        <div id="hrz_page">
+            <h1>Please enter your body parameters below</h1>
+            <p>Age</p>
+            <input type="number" id="hr_age" />
+            <button id="hr_btn" onclick="hrz('hr_age')">Calculate</button>
+
+            <div id="hr_output">
+                <p id="hrz1"></p>
+                <p id="hrz2"></p>
+                <p id="hrz3"></p>
+                <p>Please note that this is just estimation. Contact your doctor/trainer for more info.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div id="footer">
+    &copy Leonid Zadorozhnykh 2016
+</div>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="mainscript.js"></script>
+</body>
+</html>
