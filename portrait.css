@@ -5,10 +5,16 @@
 }
 .menu li{
     display: inline-block;
-    padding: 2px;
-    margin-bottom: 2px;
+    padding: 5px;
+    margin-bottom: 0;
     background-color : cornflowerblue;
     border-radius: 0;
+}
+.menu li:hover{
+    box-shadow: none;
+}
+.menu ul{
+    background-color : cornflowerblue;
 }
 
 .content {
