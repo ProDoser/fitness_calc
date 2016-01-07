@@ -1,4 +1,6 @@
 //navigation scripts
+//snow/hide elements and change page title
+//Entered information/results stays on hidden pages
 function home() {
     document.getElementById('main').style.display = 'block';
     document.getElementById('bmi_page').style.display = 'none';
@@ -46,6 +48,7 @@ function bmi(bmi_height, bmi_weight){
     }
     else if (isNaN(bmi_index)){
         document.getElementById('bmi_index').innerHTML = ("Please enter your parameters correct!");
+        document.getElementById('bmi_result').innerHTML = ("");
     }
 }
 
@@ -56,9 +59,10 @@ function hrz(hr_age){
         hr1=Math.round(max*0.6),
         hr2=Math.round(max*0.7),
         hr3=Math.round(max*0.8);
+    //Output
     document.getElementById('hrz1').innerHTML = ("Zone 1: " + hr1 + " - " + hr2);
-    document.getElementById('hrz2').innerHTML = ("Zone 1: " + hr2 + " - " + hr3);
-    document.getElementById('hrz3').innerHTML = ("Zone 1: more than " + hr3);
+    document.getElementById('hrz2').innerHTML = ("Zone 2: " + hr2 + " - " + hr3);
+    document.getElementById('hrz3').innerHTML = ("Zone 3: more than " + hr3);
 
 }
 

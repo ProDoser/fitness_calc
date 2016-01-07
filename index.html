@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Fitness calculator</title>
+    <!-- stylesheets for making web page responsive -->
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" media="(max-width: 800px)" href="800px.css">
     <link rel="stylesheet" media="(orientation: portrait)" href="portrait.css">
@@ -21,29 +22,34 @@
         </ul>
     </div>
     <div class="content">
+        <!-- This site has only one page and nav links just show/hide elements -->
+        <!-- Home Page section -->
         <div id="main">
             <h1>Welcome to Fitness Calculator</h1>
-            <p>You can navigate to the </p>
+            <p>Here you can calculate your body mass index (BMI) and your Heart Rate Zones for fitness.</p>
+            <p>You can navigate through the site using menu.</p>
         </div>
+        <!-- End of Home Page section -->
+        <!-- BMI section section -->
         <div id="bmi_page">
             <h1>Please enter your body parameters below</h1>
             <p>Height cm:</p>
-            <input type="number" id="bmi_height" />
+            <input type="number" id="bmi_height" min="1" max="250"/>
             <p>Weight kg:</p>
-            <input type="number" id="bmi_weight" />
+            <input type="number" id="bmi_weight" min="1" max="300"/>
             <button id="bmi_btn" onclick="bmi('bmi_height', 'bmi_weight' )">Calculate</button>
 
             <div id="bmi_output">
                 <p id="bmi_index"></p>
                 <p id="bmi_result"></p>
             </div>
-
-
+            <!-- End of BMI section -->
+            <!-- Hearth Rate Zones section -->
         </div>
         <div id="hrz_page">
             <h1>Please enter your body parameters below</h1>
             <p>Age</p>
-            <input type="number" id="hr_age" />
+            <input type="number" id="hr_age" min="1" max="100"/>
             <button id="hr_btn" onclick="hrz('hr_age')">Calculate</button>
 
             <div id="hr_output">
@@ -57,12 +63,11 @@
     </div>
 </div>
 
-
+<!--Footer section-->
 <div id="footer">
     &copy Leonid Zadorozhnykh 2016
 </div>
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<!--Script-->
 <script src="mainscript.js"></script>
 </body>
 </html>
